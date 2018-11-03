@@ -14,15 +14,13 @@ const internals = {};
 
 // Test shortcuts
 
-const lab = exports.lab = Lab.script();
-const describe = lab.describe;
-const it = lab.it;
+const { describe, it } = exports.lab = Lab.script();
 const expect = Code.expect;
 
 
 describe('Radix62', () => {
 
-    it('converts number to radix 62', (done) => {
+    it('converts number to radix 62', () => {
 
         const numbers = [0, 1, 2, 61, 62, 100, 1000, 100000, 1231239102390123];
         for (let i = 0; i < numbers.length; ++i) {
@@ -30,7 +28,5 @@ describe('Radix62', () => {
             const decoded = Radix62.from(encoded);
             expect(decoded).to.equal(numbers[i]);
         }
-
-        done();
     });
 });

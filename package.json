@@ -2,21 +2,17 @@
   "name": "radix62",
   "description": "Convert and parse numbers in base62",
   "version": "1.0.1",
-  "author": "Eran Hammer <eran@hammer.io> (http://hueniverse.com)",
   "repository": "git://github.com/hueniverse/radix62",
   "main": "lib/index.js",
   "keywords": [
     "base62",
     "convert"
   ],
-  "engines": {
-    "node": ">=4.x.x"
-  },
   "dependencies": {
   },
   "devDependencies": {
-    "code": "3.x.x",
-    "lab": "10.x.x"
+    "code": "5.x.x",
+    "lab": "17.x.x"
   },
   "scripts": {
     "test": "lab -a code -t 100 -L",
